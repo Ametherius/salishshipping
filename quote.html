@@ -61,6 +61,11 @@
        
         <div class="container-fluid d-flex justify-content-center">
           <form class="contact-form" action="https://formsubmit.co/ametheriustwitch@gmail.com" method="POST">
+              <!-- honeypot -->
+            <input type="text" name="_honey" style="display: none;">
+
+            <!-- Disable Captcha -->
+            <input type="hidden" name="_captcha" value="false">
             <div class="row mb-3">
               <div class="col">
                 <label for="inputSenderName" class="form-label text-white fw-bold">Sender Name</label>
