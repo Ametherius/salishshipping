@@ -140,7 +140,27 @@
               </div>
             </div>
 
-            <input type="submit" class="btn btn-outline-light my-4" value="Submit">
+            <button type="submit" class="btn btn-outline-light my-3" data-bs-toggle="modal" data-bs-target="#SuccessModal">
+  Submit
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="SuccessModal" tabindex="-1" aria-labelledby="SuccessModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content border border-3">
+      <div class="modal-header fs-5 bg-black text-white">
+        Thank You
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-black text-white">
+        We will get back to you shortly
+      </div>
+      <div class="modal-footer bg-black">
+        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
           
 
           </form>
