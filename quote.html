@@ -66,6 +66,10 @@
             <!-- Disable Captcha -->
             <input type="hidden" name="_captcha" value="false">
 
+            <input type="hidden" name="_next" value="https://salishshipping.com/success.html">
+
+
+
             <div class="row mb-3">
               <div class="col">
                 <label for="inputSenderName" class="form-label text-white fw-bold">Sender Name</label>
@@ -82,8 +86,15 @@
 
             <div class="row mb-3">
               <div class="col">
+                <label for="inputSenderInstruction" class="form-label text-white fw-bold">Special Pickup Instructions</label>
+                <input type="text" name="Special&nbsp;Pickup&nbsp;Instructions" id="SpecialPickupInstructions" class="form-control bg-black text-white">
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col">
                 <label for="inputSenderEmail" class="form-label text-white fw-bold">Sender Email Address</label>
-                <input type="email" id="SenderEmail" name="Sender&nbsp;Email" class="form-control bg-black text-white" required>
+                <input type="text" id="SenderEmail" name="Sender&nbsp;Email" class="form-control bg-black text-white" required>
               </div>
             </div>
 
@@ -126,6 +137,13 @@
 
             <div class="row mb-3">
               <div class="col">
+                <label for="inputDeliverInstructions" class="text-white fw-bold form-label">Delivery Instructions</label>
+                <input type="text" name="Delivery&nbsp;Instructions" id="DeliveryInstructions" class="form-control bg-black text-white">
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col">
                 <label for="inputRecipientPhone" class="text-white form-label fw-bold">Recipient Phone Number</label>
                 <input type="text" id="RecipientPhone" name="Recipient&nbsp;Phone&nbsp;Number" class="form-control text-white bg-black" required>
               </div>
@@ -151,23 +169,7 @@
   Submit
 </button>
 
-<!-- Modal -->
-<div class="modal fade" id="SuccessModal" tabindex="-1" aria-labelledby="SuccessModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content border border-3">
-      <div class="modal-header fs-5 bg-black text-white">
-        Thank You
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body bg-black text-white">
-        We will get back to you shortly
-      </div>
-      <div class="modal-footer bg-black">
-        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+
           
 
           </form>
