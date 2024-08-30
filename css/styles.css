@@ -10,3 +10,9 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.bg-img {
+    background-image: url('../images/salishhome.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
