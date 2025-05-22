@@ -1,22 +1,27 @@
-html {
+html, body {
     font-family: 'Kanit', sans-serif;
     font-size: 20px;
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
+}
+
+:root {
+    --bg-color: #252525;
+    --alert-color: rgba(255, 230, 0, 0.5); 
+    --alert-border: #fffb00;
+    --alert-text: #000000;
 }
 
 body {
-    background-color: rgb(49, 49, 49);
-    margin: 0;
-    padding: 0;
+    background-color: var(--bg-color);
 }
 
-/* #welcome {
-    height: auto;
-    background-image: url('../images/newhome.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
+.alert {
+    background-color: var(--alert-color);
+    border: 2px solid var(--alert-border);
+}
 
 #card {
     width: fit-content;
@@ -29,6 +34,26 @@ body {
 .ship {
     width: fit-content;
 }
+
+/* #fixed {
+    background: url('../images/newhome1.png') no-repeat center center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.welcome {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#welcome {
+    color: white;
+    text-align: center;
+    text-shadow: 3px 1px 2px black;
+} */
 
 
 
