@@ -69,12 +69,14 @@
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputSelect" class="form-label text-white">Are you sender or receiver?</label>
-                <select name="New&nbsp;Customer" id="NewCustomer" class="form-select bg-black text-white">
-                  <option value="Select">Select</option>
-                  <option value="Sender">Sender</option>
-                  <option value="Receiver">Receiver</option>
-                </select>
+                <div class="form-check form-check-inline">
+                  <input type="radio" class="form-check-input" name="Sender&nbsp;or&nbsp;Receiver" id="Sender" value="Sender" required>
+                  <label for="Sender" class="form-check-label text-white">Sender</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio" class="form-check-input" name="Sender&nbsp;or&nbsp;Receiver" id="Receiver" value="Receiver" required>
+                  <label for="Receiver" class="form-check-label text-white">Receiver</label>
+                </div>
               </div>
             </div>
 
