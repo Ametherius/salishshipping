@@ -1,0 +1,40 @@
+{
+  "rewrites": [
+    {
+      "source": "/testimonials",
+      "destination": "/testimonials.html"
+    },
+    {
+      "source": "/quote",
+      "destination": "/quote.html"
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq.html"
+    },
+    {
+      "source": "/customs-clearance",
+      "destination": "/customs-clearance.html"
+    },
+    {
+      "source": "/fr/home",
+      "destination": "/fr/home.html"
+    },
+    {
+      "source": "/fr/testimonials",
+      "destination": "/fr/testimonials.html"
+    },
+    {
+      "source": "/fr/quote",
+      "destination": "/fr/quote.html"
+    },
+    {
+      "source": "/fr/faq",
+      "destination": "/fr/faq.html"
+    },
+    {
+      "source": "/fr/customs-clearance",
+      "destination": "/fr/customs-clearance.html"
+    }
+  ]
+}

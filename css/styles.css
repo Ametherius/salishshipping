@@ -1,38 +1,39 @@
-html, body {
-    font-family: 'Kanit', sans-serif;
-    font-size: 20px;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --bg-color: #252525;
-    --alert-color: rgba(255, 230, 0, 0.5); 
-    --alert-border: #fffb00;
-    --alert-text: #000000;
+  --bg-color: #252525;
+  --alert-color: rgba(255, 230, 0, 0.5);
+  --alert-border: #fffb00;
+  --alert-text: #000000;
 }
 
 body {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 .alert {
-    background-color: var(--alert-color);
-    border: 2px solid var(--alert-border);
+  background-color: var(--alert-color);
+  border: 2px solid var(--alert-border);
 }
 
 #card {
-    width: fit-content;
+  width: fit-content;
 }
 
 .card {
-    margin-bottom: 200px;
+  margin-bottom: 200px;
 }
 
 .ship {
-    width: fit-content;
+  width: fit-content;
 }
 
 /* #fixed {
@@ -55,5 +56,58 @@ body {
     text-shadow: 3px 1px 2px black;
 } */
 
+.modalEl {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 1;
+  left: 40%;
+  transform: translateX(50%);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25%;
+  height: fit-content;
+  padding: 20px;
+}
 
+.modal-header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid white;
+  padding: 10px;
+}
 
+.modal-title {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  backdrop-filter: blur(10px);
+}
+
+.modal-body {
+  border-bottom: 1px solid white;
+  padding: 15px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
