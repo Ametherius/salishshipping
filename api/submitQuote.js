@@ -1,20 +1,45 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
+  // Handle CORS preflight
+  if (req.method === "OPTIONS") {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.status(200).end();
+    return;
+  }
+
   if (req.method !== "POST") {
     res.statusCode = 405;
-    return res.end("Method Not Allowed");
+    return res.json({ error: "Method Not Allowed" });
   }
-  if (!req.body) {
+
+  // Set CORS headers
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Content-Type", "application/json");
+
+  // Parse body - Vercel automatically parses JSON, but handle form-encoded too
+  let body = req.body;
+  if (typeof body === "string") {
+    try {
+      body = JSON.parse(body);
+    } catch (e) {
+      // If not JSON, it might be form-encoded
+      body = {};
+    }
+  }
+
+  if (!body || Object.keys(body).length === 0) {
     res.statusCode = 400;
-    return res.end("Missing Request Body");
+    return res.json({ error: "Missing Request Body" });
   }
 
   const {
     senderOrReceiver,
     senderName,
     pickupAddress,
-    pickupInstructions,
+    specialPickupInstructions,
     senderEmail,
     dimensions,
     weight,
@@ -25,7 +50,10 @@ export default async function handler(req, res) {
     cadValue,
     recipientPhone,
     discountCode,
-  } = req.body;
+  } = body;
+
+  // Use specialPickupInstructions or pickupInstructions
+  const pickupInstructions = specialPickupInstructions || "";
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -106,10 +134,12 @@ export default async function handler(req, res) {
                                       <td style="padding: 20px;">
                                           <h3 style="font-family: 'Arial', sans-serif; color: #000000; font-size: 16px; font-weight: bold;">Recipient Name:</h3>
                                           <p style="font-family: 'Arial', sans-serif; color: #000000; font-size: 16px; font-weight: bold; margin: 0;">${recipientName}</p>
-                                          <td>
-                                          <h3 style="font-family: 'Arial', sans-serif; color: #000000; font-size: 16px; font-weight: bold;">Recipient Email:</h3>
-                                          <p style="font-family: 'Arial', sans-serif; color: #000000; font-size: 16px; font-weight: bold; margin: 0;">${recipientEmail}</p>
-                                          </td>
+                                      </td>
+                                      <td style="padding: 20px;">
+                                          <h3 style="font-family: 'Arial', sans-serif; color: #000000; font-size: 16px; font-weight: bold;">Sender/Receiver:</h3>
+                                          <p style="font-family: 'Arial', sans-serif; color: #000000; font-size: 16px; font-weight: bold; margin: 0;">${
+                                            senderOrReceiver || "N/A"
+                                          }</p>
                                       </td>
                                    </tr>
                                    <tr>
@@ -157,13 +187,12 @@ export default async function handler(req, res) {
     html: htmlContent,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error("Error sending email:", error);
-      res.status(500).json({ message: "Failed to send email" });
-    } else {
-      console.log("Email sent:", info.response);
-      res.status(200).json({ message: "Email sent successfully" });
-    }
-  });
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.response);
+    res.status(200).json({ message: "Email sent successfully", success: true });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).json({ message: "Failed to send email", success: false });
+  }
 }

@@ -34,7 +34,7 @@ if (form) {
     };
     console.log("Form Data:", formData);
 
-    fetch("api/submitQuote", {
+    fetch("/api/submitQuote", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
