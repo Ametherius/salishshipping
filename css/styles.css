@@ -62,13 +62,13 @@ body {
   border-radius: 10px;
   position: fixed;
   z-index: 1;
-  left: 40%;
-  transform: translateX(50%);
   top: 50%;
-  transform: translateY(-50%);
-  width: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  max-width: 90%;
   height: fit-content;
-  padding: 20px;
+  padding: auto auto;
 }
 
 .modal-header {
