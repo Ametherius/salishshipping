@@ -7,7 +7,7 @@ var age = year - birthYear;
 document.getElementById("age").innerHTML = age;
 document.getElementById("year").innerHTML = year;
 
-const form = document.querySelector("quote-form");
+const form = document.querySelector(".contact-form");
 
 if (form) {
   form.addEventListener("submit", (e) => {
@@ -16,7 +16,7 @@ if (form) {
 
     const formData = {
       senderOrReceiver: form.querySelector(
-        'input[name="Sender or Receiver"]:checked'
+        'input[name="senderOrReceiver"]:checked'
       ).value,
       senderName: form.senderName.value,
       pickupAddress: form.pickupAddress.value,
