@@ -46,6 +46,9 @@ if (form) {
         console.log("Response received", data);
         const modalEl = document.getElementById("modalEl");
         const modalOverlay = document.getElementById("modalOverlay");
+        const modalMessage = document.getElementById("modalMessage");
+        const modalTitle = document.getElementById("modalTitle");
+        const closeModal = document.getElementById("closeModal");
 
         if (
           modalEl &&
