@@ -64,7 +64,7 @@ export default async function handler(req, res) {
   });
 
   const htmlContent = `
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Sender or Reciever: </strong>${senderOrReciever}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Sender or Reciever: </strong>${senderOrReceiver}</p>
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Sender Name: </strong>${senderName}</p>
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Sender Email: </strong>${senderEmail}</p>
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Sender Phone: </strong>${senderPhone}</p>
@@ -73,7 +73,6 @@ export default async function handler(req, res) {
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Pickup Instructions: </strong>${pickupInstructions}</p>
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Pickup Address: </strong>${pickupAddress}</p>
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Recipient Name: </strong>${recipientName}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Recipient Email: </strong>${recipientEmail}</p>
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Recipient Phone: </strong>${recipientPhone}</p>
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Discount Code: </strong>${discountCode}</p>
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>CAD Value: </strong>${cadValue}</p>
