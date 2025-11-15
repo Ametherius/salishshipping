@@ -36,18 +36,18 @@ export default async function handler(req, res) {
   }
 
   const {
-    frSenderName,
-    frPickupAddress,
-    frPickupInstructions,
-    frSenderEmail,
-    frDimensions,
-    frWeight,
-    frSenderPhone,
-    frRecipientName,
-    frDeliveryAddress,
-    frDeliveryInstructions,
-    frRecipientPhone,
-    frDiscountCode,
+    name,
+    pickupAddress,
+    pickupInstructions,
+    senderEmail,
+    dimensions,
+    weight,
+    senderPhone,
+    recipientName,
+    deliveryAddress,
+    deliveryInstructions,
+    recipientPhone,
+    discountCode,
   } = body;
 
   const transporter = nodemailer.createTransport({
@@ -59,18 +59,18 @@ export default async function handler(req, res) {
   });
 
   const htmlContent = `
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Nom de l'expéditeur: </strong>${frSenderName}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Adresse de Prise en Charge: </strong>${frPickupAddress}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Instructions de Collecte: </strong>${frPickupInstructions}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Adresse courriel de l'expéditeur: </strong>${frSenderEmail}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Dimensions (L x W x H): </strong>${frDimensions}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Poids (en Livres): </strong>${frWeight}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Numéro de Téléphone de l'Expéditeur: </strong>${frSenderPhone}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Nom du Destinataire: </strong>${frRecipientName}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Adresse de Livraison: </strong>${frDeliveryAddress}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Instructions de Livraison: </strong>${frDeliveryInstructions}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Numéro de Téléphone du Destinataire: </strong>${frRecipientPhone}</p>
-  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Code Promo: </strong>${frDiscountCode}</p>
+    <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Nom de l'expéditeur: </strong>${name}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Adresse de Prise en Charge: </strong>${pickupAddress}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Instructions de Collecte: </strong>${pickupInstructions}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Adresse courriel de l'expéditeur: </strong>${senderEmail}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Dimensions (L x W x H): </strong>${dimensions}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Poids (en Livres): </strong>${weight}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Numéro de Téléphone de l'Expéditeur: </strong>${senderPhone}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Nom du Destinataire: </strong>${recipientName}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Adresse de Livraison: </strong>${deliveryAddress}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Instructions de Livraison: </strong>${deliveryInstructions}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Numéro de Téléphone du Destinataire: </strong>${recipientPhone}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Code Promo: </strong>${discountCode}</p>
   `;
 
   const mailOptions = {
@@ -85,7 +85,7 @@ export default async function handler(req, res) {
     console.log("Email sent:", info.response);
     res.status(200).json({
       message:
-        "Quote submitted successfully. Please expect an email from salishshippingco@gmail.com shortly",
+        "Une erreur s'est produite lors de la soumission de votre devis. Veuillez réessayer.",
       success: true,
     });
   } catch (error) {
