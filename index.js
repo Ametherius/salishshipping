@@ -112,18 +112,25 @@ if (frForm) {
     e.stopPropagation();
 
     const frFormData = {
-      name: frForm.frSenderName.value,
-      pickupAddress: frForm.frPickupAddress.value,
-      pickupInstructions: frForm.frPickupInstructions.value,
-      senderEmail: frForm.frSenderEmail.value,
-      dimensions: frForm.frDimensions.value,
-      weight: frForm.frWeight.value,
-      senderPhone: frForm.frSenderPhone.value,
-      recipientName: frForm.frRecipientName.value,
-      deliveryAddress: frForm.frDeliveryAddress.value,
-      deliveryInstructions: frForm.frDeliveryInstructions.value,
-      recipientPhone: frForm.frRecipientPhone.value,
-      discountCode: frForm.frDiscountCode.value,
+      name: frForm.querySelector('[name="frSenderName"]')?.value || "",
+      pickupAddress:
+        frForm.querySelector('[name="frPickupAddress"]')?.value || "",
+      pickupInstructions:
+        frForm.querySelector('[name="frPickupInstructions"]')?.value || "",
+      senderEmail: frForm.querySelector('[name="frSenderEmail"]')?.value || "",
+      dimensions: frForm.querySelector('[name="frDimensions"]')?.value || "",
+      weight: frForm.querySelector('[name="frWeight"]')?.value || "",
+      senderPhone: frForm.querySelector('[name="frSenderPhone"]')?.value || "",
+      recipientName:
+        frForm.querySelector('[name="frRecipientName"]')?.value || "",
+      deliveryAddress:
+        frForm.querySelector('[name="frDeliveryAddress"]')?.value || "",
+      deliveryInstructions:
+        frForm.querySelector('[name="frDeliveryInstructions"]')?.value || "",
+      recipientPhone:
+        frForm.querySelector('[name="frRecipientPhone"]')?.value || "",
+      discountCode:
+        frForm.querySelector('[name="frDiscountCode"]')?.value || "",
     };
     console.log("Form Data:", frFormData);
 
@@ -134,7 +141,12 @@ if (frForm) {
       },
       body: JSON.stringify(frFormData),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => {
         console.log("Response received", data);
         const modalElFr = document.getElementById("modalElFr");
