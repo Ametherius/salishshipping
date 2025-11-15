@@ -85,7 +85,7 @@ export default async function handler(req, res) {
     console.log("Email sent:", info.response);
     res.status(200).json({
       message:
-        "Une erreur s'est produite lors de la soumission de votre devis. Veuillez réessayer.",
+        "Devis soumis avec succès. Veuillez attendre un email de salishshippingco@gmail.com dans les prochaines minutes",
       success: true,
     });
   } catch (error) {
