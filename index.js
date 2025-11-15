@@ -7,6 +7,7 @@ var age = year - birthYear;
 document.getElementById("age").innerHTML = age;
 document.getElementById("year").innerHTML = year;
 
+// English form submission
 const form = document.querySelector(".contact-form");
 
 if (form) {
@@ -96,6 +97,98 @@ if (form) {
           closeModal.addEventListener("click", () => {
             modalEl.classList.add("hidden");
             modalOverlay.classList.add("hidden");
+          });
+        } else {
+          console.error("Modal elements not found");
+        }
+      });
+  });
+}
+// French form submission
+const frForm = document.getElementById("quote-form-fr");
+if (frForm) {
+  frForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const frFormData = {
+      name: frForm.frSenderName.value,
+      pickupAddress: frForm.frPickupAddress.value,
+      pickupInstructions: frForm.frPickupInstructions.value,
+      senderEmail: frForm.frSenderEmail.value,
+      dimensions: frForm.frDimensions.value,
+      weight: frForm.frWeight.value,
+      senderPhone: frForm.frSenderPhone.value,
+      recipientName: frForm.frRecipientName.value,
+      deliveryAddress: frForm.frDeliveryAddress.value,
+      deliveryInstructions: frForm.frDeliveryInstructions.value,
+      recipientPhone: frForm.frRecipientPhone.value,
+      discountCode: frForm.frDiscountCode.value,
+    };
+    console.log("Form Data:", frFormData);
+
+    fetch("/api/submitfrForm", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(frFormData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Response received", data);
+        const modalElFr = document.getElementById("modalElFr");
+        const modalOverlayFr = document.getElementById("modalOverlayFr");
+        const modalMessageFr = document.getElementById("modalMessageFr");
+        const modalTitleFr = document.getElementById("modalTitleFr");
+        const closeModalFr = document.getElementById("closeModalFr");
+
+        if (
+          modalElFr &&
+          modalOverlayFr &&
+          modalMessageFr &&
+          modalTitleFr &&
+          closeModalFr
+        ) {
+          modalElFr.classList.remove("hidden");
+          modalOverlayFr.classList.remove("hidden");
+          modalMessageFr.innerHTML =
+            data.message ||
+            "Votre devis a été soumis avec succès. Nous vous répondrons sous peu.";
+          modalTitleFr.innerHTML = "Devis soumis";
+          closeModalFr.addEventListener("click", () => {
+            modalElFr.classList.add("hidden");
+            modalOverlayFr.classList.add("hidden");
+          });
+          if (data.success) {
+            frForm.reset();
+          }
+        } else {
+          console.error("Modal elements not found");
+        }
+      })
+      .catch((error) => {
+        console.error("Error submitting quote:", error);
+        const modalElFr = document.getElementById("modalElFr");
+        const modalOverlayFr = document.getElementById("modalOverlayFr");
+        const modalMessageFr = document.getElementById("modalMessageFr");
+        const modalTitleFr = document.getElementById("modalTitleFr");
+        const closeModalFr = document.getElementById("closeModalFr");
+        if (
+          modalElFr &&
+          modalOverlayFr &&
+          modalMessageFr &&
+          modalTitleFr &&
+          closeModalFr
+        ) {
+          modalElFr.classList.remove("hidden");
+          modalOverlayFr.classList.remove("hidden");
+          modalMessageFr.innerHTML =
+            "Une erreur s'est produite lors de la soumission de votre devis. Veuillez réessayer.";
+          modalTitleFr.innerHTML = "Erreur";
+          closeModalFr.addEventListener("click", () => {
+            modalElFr.classList.add("hidden");
+            modalOverlayFr.classList.add("hidden");
           });
         } else {
           console.error("Modal elements not found");
