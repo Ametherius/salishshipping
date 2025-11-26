@@ -111,3 +111,51 @@ body {
 .hidden {
   display: none;
 }
+
+.testimonials-container {
+  background-color: black;
+  padding: 30px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #000000;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card {
+  background-color: #000000;
+  color: white;
+  border-radius: 0;
+  border-bottom: 1px solid white;
+}
+
+.btn-primary {
+  border-radius: 0;
+  background-color: black;
+  border: 2px solid white;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+/* .testimonials-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.testimonials-container::-webkit-scrollbar-track{
+  background: #000000;
+  border-radius: 10px;
+}
+
+.testimonials-container::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 2px solid white; */
+/* } */
