@@ -1,5 +1,26 @@
 export const testimonials = [
   {
+    name: "Kaiden Fernanades",
+    company: "Big Metal Prints",
+    position: "General Manager",
+    city: "Calgary, AB",
+    website: "https://bigmetalprints.ca/",
+    testimonial: `We ship a large volume of packages all over the world, and Salish has made this process effortless.<br><br>
+    Salish has saved us time and money by handling all our international shipments and resolving any complications with cross-border shipments promptly.<br><br>
+    Salish has saved us time and money by handling all our international shipments and resolving any complications with cross-border shipments promptly.
+
+`,
+  },
+  {
+    name: "Ryan Clarke",
+    company: "Dr. Scientist Sounds",
+    position: "Owner",
+    city: "Summerland, BC",
+    website: "https://www.drscientist.ca/",
+    testimonial:
+      "Working with Gabriel and Salish Shipping has been the most important and helpful change in my small business that I can think of in recent years.  It's more than just him saving the day through Canada Post's recent strikes, it's his customer service, his knowledge, and how convenient his services are.  When the USA tariff situation came into play I was really worried about how my small business would proceed but Gabriel had it all figured out quickly, he knew exactly what to do and we haven't had a single problem since.  The courier shipping services are fast and super reliable and a great price too, and they even pick up the packages.  I hope to get to work with Gabriel for many years and I really appreciate him.",
+  },
+  {
     name: "Annie Arbuckle",
     company: "The Working Dog Co.",
     position: "Owner",
@@ -41,7 +62,7 @@ export const testimonials = [
     name: "Meghan Hildebrand",
     company: "Contemporary Canadian Painter",
     position: "Owner",
-    city: "Creston, BC",
+    city: "Powell River, BC",
     website: "https://meghanhildebrand.com/",
     testimonial: `Salish Shipping has upped my shipping game. For years I was wishing there was a delivery service with easy communication, because shipping valuable artwork can be nerve-wracking. Salish Shipping gives me peace of mind to know there is someone I can reach out to directly as I can get a quote and stay in touch via text… The prices are good as well, always lower than Canada Post with the bonus of pickup right from my studio. Recommend!`,
   },
@@ -52,5 +73,14 @@ export const testimonials = [
     city: "Creston, BC",
     website: "https://www.etsy.com/ca/shop/muckybootsart",
     testimonial: `Gabriel has always been quick to respond to my inquiries, has helped me on many occasions to navigate the "how-to's" of sending out my orders and does this all with a friendly disposition. I 100% recommend everyone to use Salish Shipping - you won't be disappointed.`,
+  },
+  {
+    name: "Siona Gartshore",
+    company: "Banff Tea Co.",
+    position: "Owner",
+    city: "Banff, AB",
+    website: "https://banffteaco.com/",
+    testimonial:
+      "I had been looking to make a move over to courier services for our shipping needs when we found Salish. They offered a solution with similar costs to our Canada Post contract but with an efficient and supported service, it was a no brainer to switch over! Gabriel has been a consistent and responsive collaborator. If it weren't for Salish our business would have faired less well during the extended Canada Post strike and beyond. I couldn’t be happier with their service.",
   },
 ];
