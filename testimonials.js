@@ -7,8 +7,7 @@ export const testimonials = [
     website: "https://bigmetalprints.ca/",
     testimonial: `We ship a large volume of packages all over the world, and Salish has made this process effortless.<br><br>
     Salish has saved us time and money by handling all our international shipments and resolving any complications with cross-border shipments promptly.<br><br>
-    Salish has saved us time and money by handling all our international shipments and resolving any complications with cross-border shipments promptly.
-
+    From navigating the continuously changing policies to helping us ensure the correct documentation is added to each package, Salish has taken the stress out of shipping internationally through impeccable knowledge and professionalism. We at Big Metal Prints highly recommend their service for any shipping needs.
 `,
   },
   {
@@ -30,6 +29,14 @@ export const testimonials = [
     <br><br>Gabriel and Salish Shipping has been a game changer. I save a significant amount, no longer pay anything out of pocket AND my items are picked up right from my studio. No more trips to the post office. 
     <br><br>Gabriel is so awesome. The communication is wonderful and very prompt.
     <br><br>Couldn’t be happier and am so glad I found Salish Shipping co!`,
+  },
+  {
+    name: "Meghan Hildebrand",
+    company: "Contemporary Canadian Painter",
+    position: "Owner",
+    city: "Powell River, BC",
+    website: "https://meghanhildebrand.com/",
+    testimonial: `Salish Shipping has upped my shipping game. For years I was wishing there was a delivery service with easy communication, because shipping valuable artwork can be nerve-wracking. Salish Shipping gives me peace of mind to know there is someone I can reach out to directly as I can get a quote and stay in touch via text… The prices are good as well, always lower than Canada Post with the bonus of pickup right from my studio. Recommend!`,
   },
   {
     name: "Andrew Evans",
@@ -57,14 +64,6 @@ export const testimonials = [
     website: "https://www.uksailmakers.com/lofts/",
     testimonial:
       "Working with Salish Shipping has saved us both time and money. Excellent customer service: responsive, attentive, professional and friendly. Highly recommended!",
-  },
-  {
-    name: "Meghan Hildebrand",
-    company: "Contemporary Canadian Painter",
-    position: "Owner",
-    city: "Powell River, BC",
-    website: "https://meghanhildebrand.com/",
-    testimonial: `Salish Shipping has upped my shipping game. For years I was wishing there was a delivery service with easy communication, because shipping valuable artwork can be nerve-wracking. Salish Shipping gives me peace of mind to know there is someone I can reach out to directly as I can get a quote and stay in touch via text… The prices are good as well, always lower than Canada Post with the bonus of pickup right from my studio. Recommend!`,
   },
   {
     name: "Heather Darrell",
