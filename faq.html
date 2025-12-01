@@ -1,134 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Salish Shipping Co.</title>
-    <link rel="icon" type="images/x-icon" href="./images/Salish Shipping co logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-  <nav class="navbar navbar-expand-xl bg-black border-bottom border-3 border-wwhite">
-    <div class="container-fluid">
-      <a href="./" class="navbar-brand text-warning col-lg-3"><img src="./images/Salish Shipping co logo.png" style="width: 50px; margin-right: 5px;" alt="Company Logo"></a>
-      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#sitenav" aria-controls="#navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center col-lg-6" id="sitenav">
-        <ul class="nav nav-underline mb-2">
-          <li class="nav-item">
-            <a href="./" class="nav-link text-white">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="./testimonials" class="nav-link text-white">Testimonials</a>
-          </li>
-          <li class="nav-item">
-            <a href="./quote" class="nav-link text-white">Request a Quote</a>
-          </li>
-          <li class="nav-item">
-            <a href="./faq" class="nav-link text-white active" aria-current="page">FAQs</a>
-          </li>
-          <li class="nav-item">
-            <a href="./customs-clearance" class="nav-link text-white">Customs Clearance</a>
-          </li>
-        </ul>
-        <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-          <a href="./fr/home" class="btn btn-light fw-bold">FR</a>
+    <link
+      rel="icon"
+      type="images/x-icon"
+      href="./images/Salish Shipping co logo.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-xl bg-black border-bottom border-3 border-wwhite"
+    >
+      <div class="container-fluid">
+        <a href="./" class="navbar-brand text-warning col-lg-3"
+          ><img
+            src="./images/Salish Shipping co logo.png"
+            style="width: 50px; margin-right: 5px"
+            alt="Company Logo"
+        /></a>
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sitenav"
+          aria-controls="#navbarToggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center col-lg-6"
+          id="sitenav"
+        >
+          <ul class="nav nav-underline mb-2">
+            <li class="nav-item">
+              <a href="./" class="nav-link text-white">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="./testimonials" class="nav-link text-white"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="./quote" class="nav-link text-white">Request a Quote</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="./faq"
+                class="nav-link text-white active"
+                aria-current="page"
+                >FAQs</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="./customs-clearance" class="nav-link text-white"
+                >Customs Clearance</a
+              >
+            </li>
+          </ul>
+          <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+            <a href="./fr/home" class="btn btn-light fw-bold">FR</a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
     <div class="container-fluid d-flex my-4 justify-content-center">
-        <h2 class="text-white text-decoration-underline">Frequently Asked Questions</h2>
+      <h2 class="text-white text-decoration-underline">
+        Frequently Asked Questions
+      </h2>
     </div>
 
-    <div class="container-fluid w-100 d-flex flex-column p-2 justify-content-center align-items-center">
+    <!-- <div
+      class="container-fluid w-100 d-flex flex-column p-2 justify-content-center align-items-center"
+    >
       <div class="card bg-black border border-3 mb-4">
-        <h4 class="card-header bg-black text-white border">Who can use Salish Shipping Co?</h4>
+        <h4 class="card-header bg-black text-white border">
+          Who can use Salish Shipping Co?
+        </h4>
         <div class="card-body text-white">
-          <p class="card-text text-white">We are more than happy to help anyone and everyone save money on shipping to or from Canada but we primarily work with Canadian businesses to help them reduce this recurring and necessary cost. This includes, but is not limited to, outbound shipments to clients and inbound shipments from suppliers. We also assist with palletized shipments and help US-based businesses reduce their cost to ship into Canada. </p>
+          <p class="card-text text-white">
+            We are more than happy to help anyone and everyone save money on
+            shipping to or from Canada but we primarily work with Canadian
+            businesses to help them reduce this recurring and necessary cost.
+            This includes, but is not limited to, outbound shipments to clients
+            and inbound shipments from suppliers. We also assist with palletized
+            shipments and help US-based businesses reduce their cost to ship
+            into Canada.
+          </p>
         </div>
       </div>
 
-        <div class="card bg-black border border-3 mb-4">
-        <h4 class="card-header bg-black text-white border">What can be shipped?</h4>
+      <div class="card bg-black border border-3 mb-4">
+        <h4 class="card-header bg-black text-white border">
+          What can be shipped?
+        </h4>
         <div class="card-body text-white">
-          <p class="card-text text-white">Salish Shipping Co helps individuals and businesses ship boxes, parcels, envelopes, cartons, pails, small containers and tubes via courier from Canadian addresses all over the world. We can also ship pallets and crates within North America through our extensive network of LTL carriers.</p>
+          <p class="card-text text-white">
+            Salish Shipping Co helps individuals and businesses ship boxes,
+            parcels, envelopes, cartons, pails, small containers and tubes via
+            courier from Canadian addresses all over the world. We can also ship
+            pallets and crates within North America through our extensive
+            network of LTL carriers.
+          </p>
         </div>
       </div>
 
-
       <div class="card bg-black border border-3 mb-4">
-        <h4 class="card-header bg-black text-white border">How does Salish Shipping Co work?</h4>
+        <h4 class="card-header bg-black text-white border">
+          How does Salish Shipping Co work?
+        </h4>
         <div class="card-body text-white">
-          <p class="card-text text-white">Our network ships 10,000 parcels every single day. Thanks to this level of volume, we’re able to pass along savings that wouldn’t typically be available to individuals or small and medium sized businesses. By shipping with Salish Shipping Co, your business becomes part of this network. </p>
+          <p class="card-text text-white">
+            Our network ships 10,000 parcels every single day. Thanks to this
+            level of volume, we’re able to pass along savings that wouldn’t
+            typically be available to individuals or small and medium sized
+            businesses. By shipping with Salish Shipping Co, your business
+            becomes part of this network.
+          </p>
         </div>
       </div>
 
       <div class="card bg-black border border-3 mb-4 w-100">
-        <h4 class="card-header bg-black text-white border">What’s included with Salish Shipping Co?</h4>
+        <h4 class="card-header bg-black text-white border">
+          What’s included with Salish Shipping Co?
+        </h4>
         <div class="card-body text-white">
-          <p class="card-text text-white">All shipments receive at home/business pickup and tracking numbers issued by couriers like UPS, FedEx, Purolator and Canpar.  Insurance is complimentary on most shipments with value of $100 or less. </p>
+          <p class="card-text text-white">
+            All shipments receive at home/business pickup and tracking numbers
+            issued by couriers like UPS, FedEx, Purolator and Canpar. Insurance
+            is complimentary on most shipments with value of $100 or less.
+          </p>
         </div>
       </div>
 
       <div class="card bg-black border border-3 mb-4 w-100">
-        <h4 class="card-header bg-black text-white border">Can more valuable shipments be insured?</h4>
+        <h4 class="card-header bg-black text-white border">
+          Can more valuable shipments be insured?
+        </h4>
         <div class="card-body text-white">
-          <p class="card-text text-white">Of course! Every shipment is unique though, so additional insurance is addressed on a case by case basis. </p>
+          <p class="card-text text-white">
+            Of course! Every shipment is unique though, so additional insurance
+            is addressed on a case by case basis.
+          </p>
         </div>
       </div>
 
-        <div class="card bg-black border border-3 mb-4 w-100">
-        <h4 class="card-header text-white border">How long do shipments take?</h4>
+      <div class="card bg-black border border-3 mb-4 w-100">
+        <h4 class="card-header text-white border">
+          How long do shipments take?
+        </h4>
         <div class="card-body text-white">
-          <p class="card-text text-white">The typical shipment has numerous speed options. Some are as fast as 1-2 business days across the continent and 3 to overseas destinations.</p>
+          <p class="card-text text-white">
+            The typical shipment has numerous speed options. Some are as fast as
+            1-2 business days across the continent and 3 to overseas
+            destinations.
+          </p>
         </div>
       </div>
 
       <div class="card bg-black border border-3 mb-4">
-        <h4 class="card-header text-white border">How do I know Salish Shipping Co saves me money?</h4>
+        <h4 class="card-header text-white border">
+          How do I know Salish Shipping Co saves me money?
+        </h4>
         <div class="card-body text-white">
-          <p class="card-text text-white">At the bare minimum, all parcel quotes are compared to Canada Post’s “Regular Parcel” pricing to ensure that a minimum of 20% is saved on every shipment. Multi-box shipments and international shipments originating in Canada see the highest savings, and existing clients who ship internationally see more than 30% savings than booking couriers themselves using their corporate courier accounts.  </p>
+          <p class="card-text text-white">
+            At the bare minimum, all parcel quotes are compared to Canada Post’s
+            “Regular Parcel” pricing to ensure that a minimum of 20% is saved on
+            every shipment. Multi-box shipments and international shipments
+            originating in Canada see the highest savings, and existing clients
+            who ship internationally see more than 30% savings than booking
+            couriers themselves using their corporate courier accounts.
+          </p>
         </div>
       </div>
-        
-
+    </div> -->
+    <div class="container">
+      <div class="faq-container">
+        <div class="card faq-card">
+          <div class="card-header">
+            <h5 class="card-title question">This is a question</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              At the bare minimum, all parcel quotes are compared to Canada
+              Post’s “Regular Parcel” pricing to ensure that a minimum of 20% is
+              saved on every shipment. Multi-box shipments and international
+              shipments originating in Canada see the highest savings, and
+              existing clients who ship internationally see more than 30%
+              savings than booking couriers themselves using their corporate
+              courier accounts.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer class="p-2 bg-black border-top border-3 border-white">
       <div class="container-fluid">
- <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-   <li class="nav-item"><a href="/" class="nav-link px-2 text-white">Home</a></li>
-   <li class="nav-item"><a href="./testimonials" class="nav-link px-2 text-white">Testimonials</a></li>
-   <li class="nav-item"><a href="./quote" class="nav-link px-2 text-white">Request a Quote</a></li>
-   <li class="nav-item"><a href="./faq" class="nav-link px-2 text-white">FAQs</a></li>
-   <li class="nav-item"><a href="./customs-clearance" class="nav-link px-2 text-white">Customs Clearance</a></li>
- </ul>
-      <div class="container-fluid">
-         <h4 class="text-center text-white p-2">We must all work together towards reconciliation for a better Canada.</h4>
-         <p class="text-center text-light p-2">The Salish Sea has been an integral part of my life for <span id="age"></span> years and will continue to be forever. My home, Salt Spring Island, is ancestral and unceded traditional territory of the Hul’q’umi’num and SENĆOŦEN speaking peoples. Most land where we ship to and ship from is also unceded traditional territory of various indigenous peoples. By recognizing these realities, and sharing this recognition, my goal is to give respect where respect is due.</p>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="/" class="nav-link px-2 text-white">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./testimonials" class="nav-link px-2 text-white"
+              >Testimonials</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./quote" class="nav-link px-2 text-white"
+              >Request a Quote</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./faq" class="nav-link px-2 text-white">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a href="./customs-clearance" class="nav-link px-2 text-white"
+              >Customs Clearance</a
+            >
+          </li>
+        </ul>
+        <div class="container-fluid">
+          <h4 class="text-center text-white p-2">
+            We must all work together towards reconciliation for a better
+            Canada.
+          </h4>
+          <p class="text-center text-light p-2">
+            The Salish Sea has been an integral part of my life for
+            <span id="age"></span> years and will continue to be forever. My
+            home, Salt Spring Island, is ancestral and unceded traditional
+            territory of the Hul’q’umi’num and SENĆOŦEN speaking peoples. Most
+            land where we ship to and ship from is also unceded traditional
+            territory of various indigenous peoples. By recognizing these
+            realities, and sharing this recognition, my goal is to give respect
+            where respect is due.
+          </p>
+        </div>
+        <div class="container-fluid">
+          <h5 class="text-white text-center p-2">-Gabriel McPhee</h5>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <p class="text-center text-white">
+            © <span id="year"></span> Salish Shipping Co
+          </p>
+          <p class="text-end small fst-italic ms-5">
+            Website by
+            <a href="https://krakenthekode.com" class="text-white"
+              >Kraken the Kode</a
+            >
+          </p>
+        </div>
       </div>
-      <div class="container-fluid">
-        <h5 class="text-white text-center p-2">-Gabriel McPhee</h5>
-      </div>
+    </footer>
 
-       
- <div class="d-flex justify-content-center">
-  <p class="text-center text-white">© <span id="year"></span> Salish Shipping Co</p>
-  <p class="text-end small fst-italic ms-5">Website by <a href="https://krakenthekode.com" class="text-white">Kraken the Kode</a></p>
-</div>
-      </div> 
-   </footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="index.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>

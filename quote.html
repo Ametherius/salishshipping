@@ -56,8 +56,8 @@
 
     
   
-       
-        <div class="container-fluid d-flex justify-content-center">
+       <div class="container">
+        <div class="container-fluid quote-container d-flex justify-content-center">
           <form class="contact-form" action="/api/submitQuote" method="POST">
 
             <div class="row mb-3">
@@ -75,50 +75,43 @@
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputSenderName" class="form-label text-white fw-bold">Sender Name</label>
-                <input type="text" name="senderName" id="senderName" class="form-control bg-black text-white">
+                <input type="text" name="senderName" id="senderName" class="form-control bg-black text-white" placeholder="Sender Name">
               </div>
             </div>
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputPickupAddress" class="form-label text-white fw-bold">Pickup Address</label>
-                <textarea class="form-control bg-black text-white" id="pickupAddress" cols="30" rows="5" name="pickupAddress" required></textarea>
+                <textarea class="form-control bg-black text-white" id="pickupAddress" cols="30" rows="5" name="pickupAddress" placeholder="Pickup Address" required></textarea>
               </div>
             </div>
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputSenderInstruction" class="form-label text-white fw-bold">Pickup Instructions</label>
-                <input type="text" name="pickupInstructions" id="pickupInstructions" class="form-control bg-black text-white">
+                <input type="text" name="pickupInstructions" id="pickupInstructions" class="form-control bg-black text-white" placeholder="Pickup Instructions">
               </div>
             </div>
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputSenderEmail" class="form-label text-white fw-bold">Sender Email Address</label>
-                <input type="text" id="senderEmail" name="senderEmail" class="form-control bg-black text-white" required>
+                <input type="text" id="senderEmail" name="senderEmail" class="form-control bg-black text-white" placeholder="Sender Email Address" required>
               </div>
             </div>
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputDimensions" class="form-label text-white fw-bold">Dimensions (LxWxH in Inches)</label>
-                <input type="text" id="dimensions" name="dimensions" class="form-control bg-black text-white" required>
+                <input type="text" id="dimensions" name="dimensions" class="form-control bg-black text-white" placeholder="Dimensions (L x W x H in inches)" required>
               </div>
             </div>
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputWeight" class="form-label text-white fw-bold">Weight (Pounds)</label>
-                <input type="text" id="weight" name="weight" class="form-control bg-black text-white" required>
+                <input type="text" id="weight" name="weight" class="form-control bg-black text-white" placeholder="Weight (Pounds)" required>
               </div>
             </div>
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputSenderPhone" class="form-label text-white fw-bold">Sender Phone Number</label>
-                <input type="text" id="senderPhone" name="senderPhone" class="form-control bg-black text-white" required>
+                <input type="text" id="senderPhone" name="senderPhone" class="form-control bg-black text-white" placeholder="Sender Phone Number" required>
               </div>
             </div>
           
@@ -126,43 +119,37 @@
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputRecipientName" class="form-label text-white fw-bold">Recipient Name</label>
-                <input type="text" id="recipientName" name="recipientName" class="form-control bg-black text-white" required>
+                <input type="text" id="recipientName" name="recipientName" class="form-control bg-black text-white" placeholder="Recipient Name" required>
               </div>
             </div>
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputDeliveryAddress" class="form-label text-white fw-bold">Delivery Address</label>
-                <textarea class="form-control bg-black text-white" name="deliveryAddress" id="deliveryAddress" cols="30" rows="5" required></textarea>
+                <textarea class="form-control bg-black text-white" name="deliveryAddress" id="deliveryAddress" cols="30" rows="5" placeholder="Delivery Address" required></textarea>
               </div>
             </div>
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputDeliverInstructions" class="text-white fw-bold form-label">Delivery Instructions</label>
-                <input type="text" name="deliveryInstructions" id="deliveryInstructions" class="form-control bg-black text-white">
+                <input type="text" name="deliveryInstructions" id="deliveryInstructions" class="form-control bg-black text-white" placeholder="Delivery Instructions">
               </div>
             </div>
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputcadvalue" class="text-white fw-bold form-label">CAD Value - For Shipments Entering or Leaving Canada</label>
-                <input type="text" name="cadValue" id="cadvalue" class="form-control bg-black text-white">
+                <input type="text" name="cadValue" id="cadvalue" class="form-control bg-black text-white" placeholder="CAD Value - Entering/Leaving Canada">
               </div>
             </div>
 
             <div class="row mb-3">
               <div class="col">
-                <label for="inputRecipientPhone" class="text-white form-label fw-bold">Recipient Phone Number</label>
-                <input type="text" id="recipientPhone" name="recipientPhone" class="form-control text-white bg-black" required>
+                <input type="text" id="recipientPhone" name="recipientPhone" class="form-control text-white bg-black" placeholder="Recipient Phone Number" required>
               </div>
             </div>
 
               <div class="row mb-3">
               <div class="col">
-                <label for="inputDiscoutCode" class="text-white form-label fw-bold">Discount Code</label>
-                <input type="text" name="discountCode" id="discountCode" class="form-control bg-black text-white">
+                <input type="text" name="discountCode" id="discountCode" class="form-control bg-black text-white" placeholder="Discount Code">
               </div>
             </div>
             
@@ -181,6 +168,7 @@
           
 
           </form>
+        </div>
         </div>
 
         <div class="modal-overlay hidden" id="modalOverlay"></div>

@@ -1,7 +1,7 @@
 export const testimonials = [
   {
     name: "Kaiden Fernanades",
-    company: "Big Metal Prints",
+    company: " : Big Metal Prints",
     position: "General Manager",
     city: "Calgary, AB",
     website: "https://bigmetalprints.ca/",
@@ -12,7 +12,7 @@ export const testimonials = [
   },
   {
     name: "Ryan Clarke",
-    company: "Dr. Scientist Sounds",
+    company: ": Dr. Scientist Sounds",
     position: "Owner",
     city: "Summerland, BC",
     website: "https://www.drscientist.ca/",
@@ -20,8 +20,17 @@ export const testimonials = [
       "Working with Gabriel and Salish Shipping has been the most important and helpful change in my small business that I can think of in recent years.  It's more than just him saving the day through Canada Post's recent strikes, it's his customer service, his knowledge, and how convenient his services are.  When the USA tariff situation came into play I was really worried about how my small business would proceed but Gabriel had it all figured out quickly, he knew exactly what to do and we haven't had a single problem since.  The courier shipping services are fast and super reliable and a great price too, and they even pick up the packages.  I hope to get to work with Gabriel for many years and I really appreciate him.",
   },
   {
+    name: "Gemma Anderson",
+    company: ": Gemma Luna",
+    position: "Owner",
+    city: "Winlaw, BC",
+    website: "https://www.etsy.com/ca/shop/GemmaLuna",
+    testimonial:
+      "The depth of gratitude I feel for Gabriel and Salish Shipping Co is nearly immeasurable.. I am a Canadian silversmith, and I nearly lost my marbles when the tariffs hit. I was so intimidated by the whole CUSMA thing.. so I reached out to Gabriel to see if he had any know how about it, and because of his guidance and expertise I've able to continue sailing along with my livelihood. Shipping to the US with Salish is a breeze. Gabriel is quick to reply to emails and texts and he is professional and also personable. I appreciate him so much in this crazy world full of automated chat bots that talk in circles going nowhere! Salish Shipping Company is a shining gem! 10 stars, highly recommend!",
+  },
+  {
     name: "Annie Arbuckle",
-    company: "The Working Dog Co.",
+    company: ": The Working Dog Co.",
     position: "Owner",
     city: "Bowen Island, BC",
     website: "https://theworkingdogco.ca/",
@@ -33,14 +42,14 @@ export const testimonials = [
   {
     name: "Meghan Hildebrand",
     company: "Contemporary Canadian Painter",
-    position: "Owner",
+    position: " ",
     city: "Powell River, BC",
     website: "https://meghanhildebrand.com/",
     testimonial: `Salish Shipping has upped my shipping game. For years I was wishing there was a delivery service with easy communication, because shipping valuable artwork can be nerve-wracking. Salish Shipping gives me peace of mind to know there is someone I can reach out to directly as I can get a quote and stay in touch via text… The prices are good as well, always lower than Canada Post with the bonus of pickup right from my studio. Recommend!`,
   },
   {
     name: "Andrew Evans",
-    company: "Empire Hydrogen",
+    company: ": Empire Hydrogen",
     position: "CEO",
     city: "Sidney, BC",
     website: "https://empirehydrogen.com/",
@@ -49,7 +58,7 @@ export const testimonials = [
   },
   {
     name: "Jon Epworth",
-    company: "Nutristart",
+    company: ": Nutristart",
     position: "General Manager",
     city: "Victoria, BC",
     website: "https://nutristart.com/",
@@ -58,7 +67,7 @@ export const testimonials = [
   },
   {
     name: "Cathy Ward",
-    company: "UK Sailmakers MW",
+    company: ": UK Sailmakers MW",
     position: "Office Manager",
     city: "Sidney, BC",
     website: "https://www.uksailmakers.com/lofts/",
@@ -67,15 +76,24 @@ export const testimonials = [
   },
   {
     name: "Heather Darrell",
-    company: "Mucky Boots Farm and Art",
+    company: ": Mucky Boots Farm and Art",
     position: "Owner",
     city: "Creston, BC",
     website: "https://www.etsy.com/ca/shop/muckybootsart",
     testimonial: `Gabriel has always been quick to respond to my inquiries, has helped me on many occasions to navigate the "how-to's" of sending out my orders and does this all with a friendly disposition. I 100% recommend everyone to use Salish Shipping - you won't be disappointed.`,
   },
   {
+    name: "Martina",
+    company: ": Grandpaws Treats",
+    position: "Owner",
+    city: "Campbell River, BC",
+    website: "https://grandpawstreats.ca/home",
+    testimonial:
+      "Discovering Salish Shipping has been a blessing to our small business! We are a Pet Treat business on Vancouver Island that, like so many other small businesses, faced shipping challenges during last year's postal strike just before Christmas. We had met Gabriel at a community event earlier in the year and decided to reach out to him for our shipping needs. Salish Shipping has lived up to all our expectations with timely shipping and communication. Thank you Salish Shipping, we wouldn't have survived without your help and will continue to use you for all our shipping needs.",
+  },
+  {
     name: "Siona Gartshore",
-    company: "Banff Tea Co.",
+    company: ": Banff Tea Co.",
     position: "Owner",
     city: "Banff, AB",
     website: "https://banffteaco.com/",

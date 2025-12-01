@@ -6,6 +6,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -159,3 +160,45 @@ body {
   border-radius: 10px;
   border: 2px solid white; */
 /* } */
+
+.faq-container {
+  background-color: black;
+  border-radius: 15px;
+  overflow-y: scroll;
+  scrollbar-color: #ffffff #000000;
+  scrollbar-width: thin;
+  width: 100%;
+  height: 100vh;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.faq-card {
+  background-color: black;
+  padding: 0;
+  color: white;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  margin: 0;
+}
+
+.quote-container {
+  background-color: black;
+  border-radius: 15px;
+  padding: 20px 30px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #000000;
+  height: 100vh;
+}
+
+.contact-form .form-control {
+  border-radius: 0;
+  border: 2px solid white;
+}
+
+.contact-form .form-control::placeholder {
+  color: white;
+}

@@ -1,4 +1,5 @@
 import { testimonials } from "./testimonials.js";
+import { faq } from "./faq.js";
 var date = new Date();
 let year = date.getFullYear();
 var birthYear = 1989;
@@ -240,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="row">
               <div class="col-md-9 col-sm-8">
                 <h6 class="card-title person ps-3">
-                  ${testimonial.name} - <span class="position">${testimonial.position}</span>: ${testimonial.company}
+                  ${testimonial.name} - <span class="position">${testimonial.position}</span> ${testimonial.company}
                 </h6>
               </div>
               <div class="col-md-3 col-sm-4">
@@ -275,4 +276,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
   displayTestimonials(testimonials);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const faqContainer = document.querySelector(".faq-container");
+
+  const displayFAQ = function (faq) {
+    faqContainer.textContent = "";
+    faq.forEach(function (faqs) {
+      const html = `
+      <div class="card faq-card">
+          <div class="card-header">
+            <h5 class="card-title question">${faqs.question}</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              ${faqs.answer}
+            </p>
+          </div>
+        </div>
+      `;
+      faqContainer.insertAdjacentHTML("beforeend", html);
+    });
+  };
+  displayFAQ(faq);
 });
