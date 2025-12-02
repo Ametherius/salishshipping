@@ -12,6 +12,11 @@ document.getElementById("year").innerHTML = year;
 // English form submission
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".contact-form");
+  const modalEl = document.getElementById("modalEl");
+  const modalOverlay = document.getElementById("modalOverlay");
+  const modalMessage = document.getElementById("modalMessage");
+  const modalTitle = document.getElementById("modalTitle");
+  const closeModal = document.getElementById("closeModal");
 
   if (form) {
     form.addEventListener("submit", (e) => {
@@ -48,11 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((response) => response.json())
         .then((data) => {
           console.log("Response received", data);
-          const modalEl = document.getElementById("modalEl");
-          const modalOverlay = document.getElementById("modalOverlay");
-          const modalMessage = document.getElementById("modalMessage");
-          const modalTitle = document.getElementById("modalTitle");
-          const closeModal = document.getElementById("closeModal");
 
           if (
             modalEl &&
@@ -61,11 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
             modalTitle &&
             closeModal
           ) {
-            modalEl.classList.remove("hidden");
-            modalOverlay.classList.remove("hidden");
             modalMessage.textContent =
               data.message ||
               "Your quote has been submitted successfully. We will get back to you shortly.";
+            modalEl.classList.remove("hidden");
+            modalOverlay.classList.remove("hidden");
             modalTitle.innerHTML = "Quote Submitted";
             closeModal.addEventListener("click", () => {
               modalEl.classList.add("hidden");
