@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ) {
             modalEl.classList.remove("hidden");
             modalOverlay.classList.remove("hidden");
-            modalMessage.innerHTML =
+            modalMessage.textContent =
               data.message ||
               "Your quote has been submitted successfully. We will get back to you shortly.";
             modalTitle.innerHTML = "Quote Submitted";
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ) {
             modalEl.classList.remove("hidden");
             modalOverlay.classList.remove("hidden");
-            modalMessage.innerHTML =
+            modalMessage.textContent =
               "An error occurred while submitting your quote. Please try again.";
             modalTitle.innerHTML = "Error";
             closeModal.addEventListener("click", () => {
