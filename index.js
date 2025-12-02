@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         recipientName: form.recipientName.value,
         deliveryAddress: form.deliveryAddress.value,
         deliveryInstructions: form.deliveryInstructions.value,
-        cadValue: form.cadValue.value,
+        cadValue: form.cadvalue.value,
         recipientPhone: form.recipientPhone.value,
         discountCode: form.discountCode.value,
       };
