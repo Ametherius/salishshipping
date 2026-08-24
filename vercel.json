@@ -17,6 +17,10 @@
       "destination": "/customs-clearance.html"
     },
     {
+      "source": "/community",
+      "destination": "/community.html",
+    },
+    {
       "source": "/fr/home",
       "destination": "/fr/home.html"
     },
