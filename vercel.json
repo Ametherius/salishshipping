@@ -18,7 +18,7 @@
     },
     {
       "source": "/community",
-      "destination": "/community.html",
+      "destination": "/community.html"
     },
     {
       "source": "/fr/home",
