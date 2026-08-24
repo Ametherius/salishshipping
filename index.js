@@ -1,5 +1,6 @@
 import { testimonials } from "./testimonials.js";
 import { faq } from "./faq.js";
+import { featuredClients } from "./featured.js";
 var date = new Date();
 let year = date.getFullYear();
 var birthYear = 1989;
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const formData = {
         senderOrReceiver: form.querySelector(
-          'input[name="senderOrReceiver"]:checked'
+          'input[name="senderOrReceiver"]:checked',
         ).value,
         senderName: form.senderName.value,
         pickupAddress: form.pickupAddress.value,
@@ -232,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const testimonialsContainer = document.querySelector(
-    ".testimonials-container"
+    ".testimonials-container",
   );
 
   const displayTestimonials = function (testimonials) {
@@ -303,4 +304,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
   displayFAQ(faq);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const featuredContainer = document.querySelector(".featured-row");
+
+  const displayFeatured = function (featured) {
+    featuredContainer.textContent = "";
+    featured.forEach(function (feat) {
+      const html = `
+       <div class="col-md-4 h-auto">
+                <div class="card featured-card border border-2 rounded-0 p-3 bg-black" height: fit-content;">
+                    <img src=${feat.image} alt="Kraken Logo" class="card-img-top" style="height: 10rem;">
+                    <div class="card-body">
+                      <h4 class="card-title text-white">${feat.name}</h4>
+                      <p class="card-text text-white">${feat.about}</p>
+                      <a href=${feat.link} class="text-white">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+      `;
+      featuredContainer.insertAdjacentHTML("beforeend", html);
+    });
+  };
+  displayFeatured(featuredClients);
 });

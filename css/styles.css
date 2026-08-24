@@ -33,6 +33,10 @@ body {
   margin-bottom: 200px;
 }
 
+.featured-card {
+  margin-bottom: 0;
+}
+
 .ship {
   width: fit-content;
 }
