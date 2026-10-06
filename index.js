@@ -313,9 +313,9 @@ document.addEventListener("DOMContentLoaded", function () {
     featuredContainer.textContent = "";
     featured.forEach(function (feat) {
       const html = `
-       <div class="col-md-4 h-auto">
+       <div class="col-md-4">
                 <div class="card featured-card border border-2 rounded-0 p-3 bg-black" height: fit-content;">
-                    <img src=${feat.image} alt="Kraken Logo" class="card-img-top" style="height: 10rem;">
+                    <img src=${feat.image} alt="${feat.name} Logo" class="card-img-top" style="height: 10rem;">
                     <div class="card-body">
                       <h4 class="card-title text-white">${feat.name}</h4>
                       <p class="card-text text-white">${feat.about}</p>
