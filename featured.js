@@ -21,7 +21,7 @@ export const featuredClients = [
     link: "https://davenportmaps.com/",
   },
   {
-    name: "Grandpaws Treats",
+    name: "Grandpaw's Treats",
     about:
       "Grandpaw’s Treats grew from Al's love for dogs and are now available in locally owned et stores and grocery stores across Vancouver Island and mainland British Columbia. We support local farmers and businesses, and purchase only federally or provincially inspected Canadian proteins to make treats that dogs and cats love.",
     image: "./images/grandpaws.jpg",
