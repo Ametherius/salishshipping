@@ -39,6 +39,9 @@
     {
       "source": "/fr/customs-clearance",
       "destination": "/fr/customs-clearance.html"
-    }
+    },
+    {
+      "source": "/gipickups",
+      "destination: "/gipickups.html",
   ]
 }
