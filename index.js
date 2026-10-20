@@ -9,6 +9,18 @@ var age = year - birthYear;
 
 document.getElementById("age").innerHTML = age;
 document.getElementById("year").innerHTML = year;
+const navLinks = [
+  {
+    label: "Home",
+    href: "./",
+  },
+  { label: "Testimonials", href: "./testimonials" },
+  { label: "Request a Quote", href: "./quote" },
+  // { label: "FAQs", href: "./faq" },
+  { label: "Customs Clearance", href: "./customs-clearance" },
+  { label: "The Salish Community", href: "./community" },
+  { label: "Mayne/Pender Pickups", href: "./gipickups" },
+];
 
 // English form submission
 document.addEventListener("DOMContentLoaded", () => {
@@ -328,4 +340,60 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
   displayFeatured(featuredClients);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const headerNav = document.querySelector(".nav-bar");
+  const footerNav = document.querySelector(".footer-nav");
+
+  const displayNav = function (array, container) {
+    container.textContent = "";
+    array.forEach((link) => {
+      const html = `
+      <li class="nav-item">
+            <a href=${link.href} class="nav-link text-white">${link.label}</a>
+          </li>
+      `;
+      container.insertAdjacentHTML("beforeend", html);
+    });
+  };
+  (displayNav(navLinks, headerNav), displayNav(navLinks, footerNav));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const pickupForm = document.querySelector(".pickup-form");
+  if (pickupForm) {
+    pickupForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const pickupFormData = {
+        name: pickupForm.name.value,
+        courier: pickupForm.courier.value,
+        weight: pickupForm.weight.value,
+        dimensions: pickupForm.dimensions.value,
+        phone: pickupForm.phone.value,
+      };
+      console.log("Pick up form data:", pickupFormData);
+
+      fetch("/api/giform", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(pickupFormData),
+      })
+        .then((res) => {
+          if (!res.ok)
+            throw new Error(`Error with your submission ${res.status}`);
+          return res.json();
+        })
+        .then((data) => {
+          console.log("Response Received:", data);
+          if (data.success) pickupForm.reset();
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    });
+  }
 });

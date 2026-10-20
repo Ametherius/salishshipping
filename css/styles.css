@@ -207,3 +207,17 @@ body {
 .contact-form .form-control::placeholder {
   color: white;
 }
+
+.navbar-toggler {
+  border: 2px solid white;
+  background-color: black;
+}
+
+.navbar-toggler:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn-close {
+  color: white;
+}
