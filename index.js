@@ -372,6 +372,7 @@ document.addEventListener("DOMContentLoaded", function () {
         weight: pickupForm.weight.value,
         dimensions: pickupForm.dimensions.value,
         phone: pickupForm.phone.value,
+        island: pickupForm.island.value,
       };
       console.log("Pick up form data:", pickupFormData);
 

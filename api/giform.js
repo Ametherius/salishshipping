@@ -30,7 +30,7 @@ export default async function handler(req, res) {
     return res.json({ error: "Missing Request Body" });
   }
 
-  const { name, courier, weight, dimensions, phone } = body;
+  const { name, courier, weight, dimensions, phone, island } = body;
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -46,6 +46,7 @@ export default async function handler(req, res) {
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Weight: </strong>${weight}</p>
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Dimensions: </strong>${dimensions}</p>
   <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Phone Number: </strong>${phone}</p>
+  <p style="font-family: 'Arial', sans-serif; padding: 20px; border: 1px solid #000000; margin: 0; text-align: start;"><strong>Phone Island: </strong>${island}</p>
   `;
   const mailOptions = {
     from: `Salish Shipping Co. <${process.env.EMAIL_USER}>`,

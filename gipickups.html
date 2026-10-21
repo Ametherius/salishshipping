@@ -67,11 +67,22 @@
         <h1>Pickups on Pender and Mayne</h1>
       </div>
       <div
-        class="bg-black rounded-2 border border-2 p-3 container"
-        style="max-width: fit-content"
+        class="bg-black rounded-2 border border-2 p-4 container"
+        style="max-width: 30rem"
       >
-        <h2 class="text-white">Request a Pickup</h2>
+        <h2 class="text-white text-decoration-underline text-center">
+          Request a Pickup
+        </h2>
+        <p class="text-white fst-italic">
+          *Pickups from Pender every Tuesday, and pickups from Mayne are every
+          Thursday
+        </p>
         <form action="/api/giform" method="POST" class="pickup-form">
+          <select name="island" id="island" class="form-select my-3">
+            <option selected>Which Island?</option>
+            <option value="Pender">Pender</option>
+            <option value="Mayne">Mayne</option>
+          </select>
           <div class="form-group mb-1">
             <label for="name" class="form-label text-light"
               >Name <span class="fst-italic">(Required)</span></label
